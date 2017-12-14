@@ -2,10 +2,13 @@
 function Contact(first, last) {
   this.firstName = first;
   this.lastName = last;
+  this.fullName = "";
 }
+
 Contact.prototype.fullName = function() {
   return this.firstName + " " + this.lastName;
 }
+
 // user interface logic
 $(document).ready(function() {
   $("form#new-contact").submit(function(event) {
